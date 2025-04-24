@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爆裂れもん 歌枠プレイヤー</title>
+
+    <!-- Google Fontsのインポート -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css"> <!-- CSSファイル -->
+    <script src="https://www.youtube.com/iframe_api"></script> <!-- YouTube API読み込み -->
+    <script src="./scripts.js" defer></script> <!-- JavaScriptファイル -->
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header>
+        <h1 id="gradient-title">爆裂れもん 歌枠プレイヤー</h1>
+        <div id="header-right">
+            <div id="subscribe-button">
+                <script src="https://apis.google.com/js/platform.js"></script>
+                <div class="g-ytsubscribe" data-channelid="UCxqEJKeM-mTi8TX_kIpRT7g" data-layout="full" data-theme="default" data-count="default"></div>
+            </div>
+            <div id="songlist-link">
+                <a href="https://youtube.com/playlist?list=PLZqnLksa6kaOkGVkgUBJdEiAxxfDnJlld&si=j5c6EX8jgNfYILQ8" target="_blank">爆裂れもん 歌枠リスト</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 現在再生中の楽曲表示 -->
+    <div id="current-song-container">
+        <span id="current-song">現在の楽曲：</span>
+    </div>
+
+    <!-- YouTubeプレイヤー -->
+    <div id="sample"></div>
+
+    <!-- 動画と楽曲選択用ドロップダウンボックス -->
+    <div id="dropdown-container">
+        <select id="video-select">
+            <option value="">好きな歌枠を選択してくれ！</option>
+        </select>
+        <select id="timestamp-select">
+            <option value="">歌枠を選んだら曲も選んでくれよな！</option>
+        </select>
+    </div>
+
+    <!-- コントロールボタン -->
+    <div id="control">
+        <button id="play">▶</button>
+        <button id="pause">⏸</button>
+        <button id="stop">⏹</button>
+        <button id="prev">10 ⏮</button>
+        <button id="next">10 ⏭</button>
+        <button id="volup">🔊</button>
+        <button id="voldown">🔉</button>
+        <button id="mute">🔇</button>
+        <button id="random">RANDOM</button>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,162 @@
+/* ベースデザイン */
+body {
+  font-family: 'Quicksand', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f2dc;
+  background-image: radial-gradient(circle, #ffe5b4 3px, transparent 3px);
+  background-size: 30px 30px;
+  color: #333;
+  text-align: center;
+}
+
+/* ヘッダー */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 80px;
+  position: relative;
+}
+
+/* グラデーションタイトル */
+#gradient-title {
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 20px;
+  background: linear-gradient(to right, #ff0000, #ffff00); /* 赤から黄色へのグラデーション */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: bold;
+}
+
+/* ヘッダー右側コンテナ */
+#header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: absolute;
+  right: 20px;
+  height: 100%;
+}
+
+/* チャンネル登録ボタン */
+#subscribe-button {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+/* 歌枠リストのリンク */
+#songlist-link {
+  margin-top: 10px;
+}
+
+#songlist-link a {
+  display: inline-block;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: #ffa726;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 20px;
+  text-decoration: none;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#songlist-link a:hover {
+  background-color: #ef5350;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+/* 現在の楽曲表示（位置調整） */
+#current-song-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px; /* 少し上へ */
+}
+
+/* 楽曲名の長さに応じて枠サイズを変更 */
+#current-song {
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  color: #333;
+  background-color: #fff;
+  border: 2px solid #c8b5a4;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  display: inline-block; /* コンテンツの長さに合わせる */
+  max-width: 80%; /* 最大幅制限 */
+  white-space: nowrap; /* テキストを折り返さない */
+  overflow: hidden;
+  text-overflow: ellipsis; /* 長すぎる場合に省略 */
+}
+
+/* ドロップダウンボックスのコンテナ（位置調整） */
+#dropdown-container {
+  margin-top: 15px; /* 少し上へ */
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+/* 動画選択ボックスと曲名選択ボックス（サイズ変更なし） */
+#video-select, #timestamp-select {
+  padding: 10px;
+  font-size: 16px;
+  width: 400px;
+  border-radius: 10px;
+  border: 2px solid #c8b5a4;
+  background-color: #fff;
+  color: #333;
+  font-weight: bold;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* YouTubeプレイヤー（位置調整） */
+#sample {
+  width: 900px;
+  height: 500px;
+  margin-top: 10px; /* 少し上へ */
+  border: 5px solid #d4a373;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ボタン群（位置調整） */
+#control {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px; /* 少し上へ */
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 24px;
+  background-color: #ffa726;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+  background-color: #ef5350;
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+button:active {
+  transform: scale(1);
+  box-shadow: none;
+}
