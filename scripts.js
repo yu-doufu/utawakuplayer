@@ -8,7 +8,7 @@ function onYouTubeIframeAPIReady() {
     ytPlayer = new YT.Player('sample', {
         height: '390',
         width: '640',
-        videoId: '', // 初期状態では動画IDを空に
+        videoId: 'T7CYthEK67Y', // 初期状態では動画IDを空に
         playerVars: { controls: 1, autoplay: 0 },
         events: {
             'onReady': onPlayerReady,
